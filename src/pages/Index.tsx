@@ -1,21 +1,63 @@
-import Navigation from "@/components/Navigation";
+import { Navigation } from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ChatInterface from "@/components/ChatInterface";
 import ScreeningForm from "@/components/ScreeningForm";
 import ResourceHub from "@/components/ResourceHub";
+import { FacialRecognition } from "@/components/FacialRecognition";
+import { VoiceAnalysis } from "@/components/VoiceAnalysis";
 
-const Index = () => {
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'student' | 'counselor' | 'admin' | 'volunteer';
+}
+
+interface IndexProps {
+  user: User;
+  onLogout: () => void;
+}
+
+const Index = ({ user, onLogout }: IndexProps) => {
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-      <main>
-        <HeroSection />
-        <ChatInterface />
-        <ScreeningForm />
-        <ResourceHub />
-      </main>
+    <main className="min-h-screen bg-background">
+      <Navigation user={user} onLogout={onLogout} />
+      <HeroSection />
       
-      {/* Footer */}
+      <section id="chat" className="py-16 px-4">
+        <div className="container mx-auto">
+          <ChatInterface />
+        </div>
+      </section>
+
+      <section id="screening" className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <ScreeningForm />
+        </div>
+      </section>
+
+      <section id="advanced" className="py-16 px-4">
+        <div className="container mx-auto space-y-12">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl font-bold">Advanced Analysis</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Experience cutting-edge AI technology for comprehensive mental health assessment
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8">
+            <FacialRecognition />
+            <VoiceAnalysis />
+          </div>
+        </div>
+      </section>
+
+      <section id="resources" className="py-16 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <ResourceHub />
+        </div>
+      </section>
+
       <footer className="bg-therapeutic/10 border-t border-border/50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -40,7 +82,7 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
+    </main>
   );
 };
 
