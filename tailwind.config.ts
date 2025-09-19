@@ -22,10 +22,17 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          soft: "hsl(var(--primary-soft))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          soft: "hsl(var(--secondary-soft))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+          soft: "hsl(var(--accent-soft))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -35,10 +42,6 @@ export default {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -46,6 +49,22 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        therapeutic: {
+          DEFAULT: "hsl(var(--therapeutic))",
+          foreground: "hsl(var(--therapeutic-foreground))",
+        },
+        safe: {
+          DEFAULT: "hsl(var(--safe))",
+          foreground: "hsl(var(--safe-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
+        crisis: {
+          DEFAULT: "hsl(var(--crisis))",
+          foreground: "hsl(var(--crisis-foreground))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -57,6 +76,20 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-calm': 'var(--gradient-calm)',
+        'gradient-support': 'var(--gradient-support)',
+      },
+      boxShadow: {
+        'soft': 'var(--shadow-soft)',
+        'therapeutic': 'var(--shadow-therapeutic)',
+        'elevated': 'var(--shadow-elevated)',
+      },
+      transitionTimingFunction: {
+        'smooth': 'var(--transition-smooth)',
+        'gentle': 'var(--transition-gentle)',
       },
       borderRadius: {
         lg: "var(--radius)",

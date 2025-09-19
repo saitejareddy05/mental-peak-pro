@@ -8,35 +8,66 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Mental Health Theme - Calming & Professional */
+    --background: 220 20% 98%;
+    --foreground: 220 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Calming Teal - Trust & Medical */
+    --primary: 185 75% 45%;
+    --primary-foreground: 0 0% 98%;
+    --primary-soft: 185 45% 85%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Soft Green - Growth & Healing */
+    --secondary: 145 35% 75%;
+    --secondary-foreground: 145 50% 25%;
+    --secondary-soft: 145 25% 90%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent: Warm Coral - Hope & Energy */
+    --accent: 15 75% 65%;
+    --accent-foreground: 0 0% 98%;
+    --accent-soft: 15 45% 92%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 55%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 88%;
+    --input: 220 15% 96%;
+    --ring: 185 75% 45%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Mental Health Specific Colors */
+    --therapeutic: 200 25% 85%;
+    --therapeutic-foreground: 200 30% 25%;
+    --safe: 125 40% 80%;
+    --safe-foreground: 125 50% 25%;
+    --warning: 35 85% 70%;
+    --warning-foreground: 35 50% 20%;
+    --crisis: 0 75% 65%;
+    --crisis-foreground: 0 0% 98%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-calm: linear-gradient(180deg, hsl(var(--background)), hsl(var(--therapeutic)));
+    --gradient-support: linear-gradient(45deg, hsl(var(--primary-soft)), hsl(var(--accent-soft)));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.1);
+    --shadow-therapeutic: 0 8px 32px -8px hsl(var(--primary) / 0.15);
+    --shadow-elevated: 0 12px 40px -8px hsl(var(--primary) / 0.2);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gentle: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 
     --sidebar-background: 0 0% 98%;
 
